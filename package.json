@@ -1,0 +1,88 @@
+{
+  "id" : "netuitive.packages.rabbitmq",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages RabbitMQ",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the elements collected from the RabbitMQ collector in the Netuitive Agent.",
+    "author" : {
+      "name" : "Netuitive Research",
+      "email" : "research@netuitive.com"
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-apache-httpd/archive/master.zip"
+    },
+    "compatibility" : [ "INFRASTRUCTURE:RabbitMQ" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/rabbitmq.-.depressed.message.count.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/rabbitmq.-.elevated.memory.usage.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/rabbitmq.-.elevated.message.count.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/rabbitmq.-.exceeded.disk.free.limit.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/rabbitmq.-.exceeded.memory.limit.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/rabbitmq.-.memory.usage.approaching.limit.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/rabbitmq.-.unexpectedly.low.free.disk.space.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/ace-rabbitmq.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-rabbitmq.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-rabbitmq.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/rabbitmq.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}
