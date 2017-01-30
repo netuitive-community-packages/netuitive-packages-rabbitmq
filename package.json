@@ -10,7 +10,7 @@
     },
     "distro" : {
       "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
-      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-apache-httpd/archive/master.zip"
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-rabbitmq/archive/master.zip"
     },
     "compatibility" : [ "INFRASTRUCTURE:RabbitMQ" ],
     "tags" : [ ],
