@@ -7,6 +7,7 @@ For detailed information on this package, please refer to the [online documentat
 ### Version next
 
 * Adjusted build to use metricly-cli for validation
+* Added metric meta and ace configurations for node health metric
 
 ### Version 1.1.0
 
