@@ -33,13 +33,13 @@
             "unit": "count"
           }
         }
-      }, 
+      },
       {
-        "match" : "rabbitmq\\.health\\.running",
-        "properties" : {
-          "STATISTIC" : "min"
-          }
-       }, 
+        "match": "rabbitmq\\.health\\.running",
+        "properties": {
+          "STATISTIC": "min"
+        }
+      },
       {
         "match": "rabbitmq\\.message_stats\\.(ack|deliver|deliver_get|publish|redeliver)$",
         "properties": {
