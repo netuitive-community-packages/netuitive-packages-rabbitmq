@@ -2,7 +2,7 @@
   "analyticConfiguration": {
     "metrics": [
       {
-        "match": "rabbitmq\\.health\\..*(_limit|_total)$",
+        "match": "rabbitmq\\.health\\..*(_limit|_total|running)$",
         "properties": {
           "baseline": false,
           "correlation": false
