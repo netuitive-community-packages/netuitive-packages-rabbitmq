@@ -1,80 +1,84 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "RabbitMQ",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^rabbitmq.*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "rabbitmq\\.health\\.(disk_free|disk_free_limit|mem_used|mem_limit)$",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive\\.linux\\.rabbitmq\\.health\\..*",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          }
+        }
+      },
+      {
+        "match": "rabbitmq\\.cluster\\..*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "rabbitmq\\.health\\.(fd_|proc_|sockets_).*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      }, 
+      {
+        "match" : "rabbitmq\\.health\\.running",
+        "properties" : {
+          "STATISTIC" : "min"
+          }
+       }, 
+      {
+        "match": "rabbitmq\\.message_stats\\.(ack|deliver|deliver_get|publish|redeliver)$",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          },
+          "type": "COUNTER"
+        }
+      },
+      {
+        "match": "rabbitmq\\.object_totals\\..*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "rabbitmq\\.queue_totals\\.(messages|messages_ready|messages_unacknowledged)$",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "rabbitmq\\..*\\.rate$",
+        "properties": {
+          "tags": {
+            "unit": "ops"
+          }
+        }
+      }
+    ],
+    "name": "RabbitMQ",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^rabbitmq.*"
     },
-    "metrics" : [ {
-      "match" : "rabbitmq\\.health\\.(disk_free|disk_free_limit|mem_used|mem_limit)$",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive\\.linux\\.rabbitmq\\.health\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        }
-      }
-    }, {
-      "match" : "rabbitmq\\.cluster\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "rabbitmq\\.health\\.(fd_|proc_|sockets_).*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-  "match" : "rabbitmq\\.health\\.running",
-  "properties" : {
-    "STATISTIC" : "min"
-      }
-    }, {
-      "match" : "rabbitmq\\.message_stats\\.(ack|deliver|deliver_get|publish|redeliver)$",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        },
-        "type" : "COUNTER"
-      }
-    }, {
-      "match" : "rabbitmq\\.object_totals\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "rabbitmq\\.queue_totals\\.(messages|messages_ready|messages_unacknowledged)$",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "rabbitmq\\..*\\.rate$",
-      "properties" : {
-        "tags" : {
-          "unit" : "ops"
-        },
-        "validMin" : null
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

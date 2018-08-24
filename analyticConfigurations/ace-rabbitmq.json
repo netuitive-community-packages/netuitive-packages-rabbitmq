@@ -1,46 +1,47 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "ACE",
-    "id" : null,
-    "packageId" : null,
-    "name" : "RabbitMQ",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^rabbitmq.*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "rabbitmq\\.health\\..*(_limit|_total|running)$",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "rabbitmq\\.cluster\\..*",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "rabbitmq\\.message_stats\\.redeliver.*",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "rabbitmq\\.object_totals\\..*",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "rabbitmq\\.queue_totals\\.messages_ready.*",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      }
+    ],
+    "name": "RabbitMQ",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^rabbitmq.*"
     },
-    "metrics" : [ {
-      "match" : "rabbitmq\\.health\\..*(_limit|_total|running)$",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "rabbitmq\\.cluster\\..*",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "rabbitmq\\.message_stats\\.redeliver.*",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "rabbitmq\\.object_totals\\..*",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "rabbitmq\\.queue_totals\\.messages_ready.*",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    } ]
+    "type": "ACE"
   }
 }
