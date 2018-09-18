@@ -1,48 +1,32 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "RabbitMQ - Memory Usage Approaching Limit",
-    "description" : "Memory utilization has reached 90% of the configured limit.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "SERVER",
-      "elementTags" : { }
-    },
-    "duration" : 300,
-    "conditions" : [ {
-      "metric" : "netuitive.linux.rabbitmq.health.mem_utilization_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">=",
-      "level" : 90.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "netuitive.linux.rabbitmq.health.mem_utilization_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : "<=",
-      "level" : 100.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 90,
+        "metric": "netuitive.linux.rabbitmq.health.mem_utilization_percent",
+        "operator": ">="
+      },
+      {
+        "analytic": "actual",
+        "level": 100,
+        "metric": "netuitive.linux.rabbitmq.health.mem_utilization_percent",
+        "operator": "<="
+      }
+    ],
+    "deleted": false,
+    "description": "Memory utilization has reached 90% of the configured limit.",
+    "duration": 300,
+    "enabled": true,
+    "name": "RabbitMQ - Memory Usage Approaching Limit",
+    "scope": {
+      "elementType": "SERVER"
+    }
   }
 }
