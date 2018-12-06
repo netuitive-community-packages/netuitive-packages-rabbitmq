@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Added metric meta and ace configurations for shovel state metric
+
 ### Version 1.2.0
 
 * Adjusted build to use metricly-cli for validation

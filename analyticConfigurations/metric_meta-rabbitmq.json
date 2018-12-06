@@ -72,6 +72,11 @@
             "unit": "ops"
           }
         }
+      }, {
+        "match": "rabbitmq\\.shovels\\..*\\.state",
+        "properties": {
+          "STATISTIC": "min"
+        }
       }
     ],
     "name": "RabbitMQ",
