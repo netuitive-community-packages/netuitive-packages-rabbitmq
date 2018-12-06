@@ -35,7 +35,8 @@
           "baseline": false,
           "correlation": false
         }
-      }, {
+      },
+      {
         "match": "rabbitmq\\.shovels\\..*\\.state",
         "properties": {
           "baseline": false,
