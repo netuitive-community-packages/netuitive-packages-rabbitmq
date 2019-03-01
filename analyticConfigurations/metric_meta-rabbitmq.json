@@ -78,6 +78,12 @@
         "properties": {
           "STATISTIC": "min"
         }
+      },
+      {
+        "match": "rabbitmq\\.cluster\\.nodes",
+        "properties": {
+          "sparseDataStrategy": "ReplaceWithZero"
+        }
       }
     ],
     "name": "RabbitMQ",
