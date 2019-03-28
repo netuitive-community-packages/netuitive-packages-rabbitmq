@@ -1,5 +1,9 @@
 # Release History
 
+## Version next
+
+* Convert computed metrics to new format
+
 ## Version 1.2.2
 
 * Added ReplaceWithZero sparseDataStrategy for cluster.nodes
