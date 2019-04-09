@@ -4,7 +4,9 @@
       {
         "match": "netuitive.linux.rabbitmq.health.fd_utilization_percent",
         "properties": {
-          "expression": "data['rabbitmq.health.fd_used'].actual / data['rabbitmq.health.fd_total'].actual * 100",
+          "expressions": [
+            "${rabbitmq.health.fd_used}.actual / ${rabbitmq.health.fd_total}.actual * 100"
+          ],
           "fqn": "netuitive.linux.rabbitmq.health.fd_utilization_percent",
           "name": "File Descriptor Utilization Percent"
         }
@@ -12,7 +14,9 @@
       {
         "match": "netuitive.linux.rabbitmq.health.mem_utilization_percent",
         "properties": {
-          "expression": "data['rabbitmq.health.mem_used'].actual / data['rabbitmq.health.mem_limit'].actual * 100",
+          "expressions": [
+            "${rabbitmq.health.mem_used}.actual / ${rabbitmq.health.mem_limit}.actual * 100"
+          ],
           "fqn": "netuitive.linux.rabbitmq.health.mem_utilization_percent",
           "name": "Memory Utilization Percent"
         }
@@ -20,7 +24,9 @@
       {
         "match": "netuitive.linux.rabbitmq.health.proc_utilization_percent",
         "properties": {
-          "expression": "data['rabbitmq.health.proc_used'].actual / data['rabbitmq.health.proc_total'].actual * 100",
+          "expressions": [
+            "${rabbitmq.health.proc_used}.actual / ${rabbitmq.health.proc_total}.actual * 100"
+          ],
           "fqn": "netuitive.linux.rabbitmq.health.proc_utilization_percent",
           "name": "Process Utilization Percent"
         }
@@ -28,7 +34,9 @@
       {
         "match": "netuitive.linux.rabbitmq.health.socket_utilization_percent",
         "properties": {
-          "expression": "data['rabbitmq.health.sockets_used'].actual / data['rabbitmq.health.sockets_total'].actual * 100",
+          "expressions": [
+            "${rabbitmq.health.sockets_used}.actual / ${rabbitmq.health.sockets_total}.actual * 100"
+          ],
           "fqn": "netuitive.linux.rabbitmq.health.socket_utilization_percent",
           "name": "Socket Utilization Percent"
         }
