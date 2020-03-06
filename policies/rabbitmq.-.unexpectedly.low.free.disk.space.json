@@ -1,6 +1,4 @@
-{
-  "policy": {
-    "actions": [
+{ "policy": { "actions": [
       {
         "category": 2,
         "type": "event"
@@ -19,7 +17,9 @@
     "enabled": true,
     "name": "RabbitMQ - Unexpectedly Low Free Disk Space",
     "scope": {
-      "elementType": "SERVER"
+      "elementTypes": [
+	"SERVER"
+      ]
     }
   }
 }

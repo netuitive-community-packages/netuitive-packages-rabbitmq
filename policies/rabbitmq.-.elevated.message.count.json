@@ -19,7 +19,9 @@
     "enabled": true,
     "name": "RabbitMQ - Elevated Message Count",
     "scope": {
-      "elementType": "SERVER"
+      "elementTypes": [
+	"SERVER"
+      ]
     }
   }
 }
