@@ -21,7 +21,7 @@
     "name": "RabbitMQ - Exceeded Memory Limit",
     "scope": {
       "elementTypes": [
-	"SERVER"
+        "SERVER"
       ]
     }
   }

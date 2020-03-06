@@ -20,7 +20,7 @@
     "name": "RabbitMQ - Elevated Message Count",
     "scope": {
       "elementTypes": [
-	"SERVER"
+        "SERVER"
       ]
     }
   }

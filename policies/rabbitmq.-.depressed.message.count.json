@@ -20,7 +20,7 @@
     "name": "RabbitMQ - Depressed Message Count",
     "scope": {
       "elementTypes": [
-	"SERVER"
+        "SERVER"
       ]
     }
   }

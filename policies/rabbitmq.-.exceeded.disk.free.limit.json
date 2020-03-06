@@ -21,7 +21,7 @@
     "name": "RabbitMQ - Exceeded Disk Free Limit",
     "scope": {
       "elementTypes": [
-	"SERVER"
+        "SERVER"
       ]
     }
   }

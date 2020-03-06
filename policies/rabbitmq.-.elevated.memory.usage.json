@@ -20,7 +20,7 @@
     "name": "RabbitMQ - Elevated Memory Usage",
     "scope": {
       "elementTypes": [
-	"SERVER"
+        "SERVER"
       ]
     }
   }

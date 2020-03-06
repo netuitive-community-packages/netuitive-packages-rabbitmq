@@ -27,7 +27,7 @@
     "name": "RabbitMQ - Memory Usage Approaching Limit",
     "scope": {
       "elementTypes": [
-	"SERVER"
+        "SERVER"
       ]
     }
   }
