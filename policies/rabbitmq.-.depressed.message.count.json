@@ -19,7 +19,9 @@
     "enabled": true,
     "name": "RabbitMQ - Depressed Message Count",
     "scope": {
-      "elementType": "SERVER"
+      "elementTypes": [
+        "SERVER"
+      ]
     }
   }
 }
